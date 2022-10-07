@@ -34,6 +34,7 @@ declare global {
   namespace Cypress {
     interface Chainable {
       login(email: string, password: string): Chainable<void>;
+      parseXlsx(inputFile: any): any;
       safeLogin(email: string, password: string): Chainable<void>;
     }
   }
@@ -51,3 +52,6 @@ Cypress.Commands.add("login", (username: string, password: string) => {
     cy.get("#login").click();
   });
   
+  Cypress.Commands.add("parseXlsx", (inputFile) => {
+    return cy.task("parseXlsx", { filePath: inputFile });
+  });
