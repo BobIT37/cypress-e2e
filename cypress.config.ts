@@ -68,6 +68,8 @@ export default defineConfig({
       },
       //Mobile validation
       mobileViewportWidthBreakpoint: 400,
+      user: "bob123456",
+      password: ""
     },
     experimentalSessionAndOrigin: true,
   },
